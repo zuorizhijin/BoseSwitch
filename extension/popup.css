@@ -1,0 +1,79 @@
+:root {
+  --bg: #ffffff;
+  --fg: #1d1d1f;
+  --muted: #6e6e73;
+  --line: #e5e5ea;
+  --accent: #111111;
+  --accent-fg: #ffffff;
+  --ok: #1f9d55;
+  --err: #c0392b;
+  --btn: #f2f2f5;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1c1c1e;
+    --fg: #f5f5f7;
+    --muted: #a1a1a6;
+    --line: #38383a;
+    --accent: #f5f5f7;
+    --accent-fg: #1c1c1e;
+    --btn: #2c2c2e;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  min-width: 340px;
+  margin: 0;
+  padding: 12px 14px;
+  font: 13px/1.45 system-ui, "Microsoft YaHei", sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+}
+header { display: flex; align-items: center; gap: 8px; }
+header img { width: 24px; height: 24px; border-radius: 4px; }
+select {
+  flex: 1;
+  padding: 5px 6px;
+  font: inherit;
+  color: var(--fg);
+  background: var(--btn);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+button {
+  font: inherit;
+  color: var(--fg);
+  background: var(--btn);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 4px 10px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+button:disabled { opacity: 0.45; cursor: default; }
+button.icon { padding: 4px 8px; }
+h2 { font-size: 12px; font-weight: 600; color: var(--muted); margin: 14px 0 6px; }
+#info { margin-top: 10px; color: var(--muted); }
+#info b { color: var(--fg); font-size: 14px; }
+.seg { display: flex; gap: 6px; }
+.seg button { flex: 1; padding: 7px 0; }
+.seg button.on { background: var(--accent); color: var(--accent-fg); border-color: var(--accent); }
+ul { list-style: none; margin: 0; padding: 0; }
+li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 0;
+  border-top: 1px solid var(--line);
+}
+li:first-child { border-top: 0; }
+.dot { width: 8px; height: 8px; border-radius: 50%; background: var(--line); flex: none; }
+.dot.on { background: var(--ok); }
+.name { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.tag { font-size: 11px; color: var(--muted); border: 1px solid var(--line); border-radius: 4px; padding: 0 4px; margin-left: 4px; }
+#msg { min-height: 1.4em; margin: 12px 0 0; padding: 6px 8px; border-radius: 6px; color: var(--muted); }
+#msg:empty { padding: 0; }
+#msg.error { color: var(--err); background: color-mix(in srgb, var(--err) 12%, transparent); }
+#msg.ok { color: var(--ok); background: color-mix(in srgb, var(--ok) 12%, transparent); }
+footer { margin-top: 8px; text-align: right; font-size: 11px; }
+footer a { color: var(--muted); }

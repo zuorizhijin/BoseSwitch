@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>BoseSwitch 诊断</title>
+<style>
+  body { font: 14px/1.5 system-ui, "Microsoft YaHei", sans-serif; margin: 24px; max-width: 900px; }
+  button, select { font-size: 14px; padding: 5px 12px; margin: 0 8px 8px 0; }
+  input { font: 13px monospace; width: 360px; padding: 5px; }
+  pre { background: #111; color: #ddd; padding: 12px; min-height: 240px; white-space: pre-wrap; font-size: 12px; }
+</style>
+</head>
+<body>
+<h2>BoseSwitch 诊断页</h2>
+<p>通过小助手直接收发原始 BMAP 包。只用于排查问题；请只发送已知含义的包。</p>
+<select id="dev"></select>
+<button id="open">打开通道</button>
+<button id="copy">复制日志</button>
+<div>
+  <input id="hex" placeholder="原始包十六进制，如 02020100">
+  <button id="send" disabled>发送</button>
+</div>
+<pre id="log"></pre>
+<script type="module" src="diag.js"></script>
+</body>
+</html>

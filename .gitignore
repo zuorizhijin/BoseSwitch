@@ -1,0 +1,25 @@
+# 本地备份与生图中间文件
+.private/
+docs/images/_incoming/
+docs/images/icon_source.png
+
+# 系统与运行时产物
+.DS_Store
+__pycache__/
+node_modules/
+
+# 安装脚本在本机生成的文件（含本地路径）
+helper/boseswitch_host.bat
+helper/com.boseswitch.helper.json
+
+# 内部文档、笔记和含真实设备名的原始截图
+HANDOFF.md
+duihua.md
+ai-notes/
+win-qc45.png
+
+# 已放弃的局域网互助实验（本地残留，不发布）
+helper/lan.py
+helper/test_lan.py
+extension/lib/peers.js
+test/peers.test.js

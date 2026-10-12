@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "BoseSwitch",
+  "version": "0.1.0",
+  "description": "在电脑上切换 Bose 耳机的降噪模式和连接对象",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0I8A730rykdQ/R+Ig1aoNK6BaOw7KC6cEeJyVAFl6yX3+UlTgWDgj3EyRxVDafNFSh4Hv67xUdgsJRTZjxrDisLdgaVnTFsua8hHm6S7Zr85x3BA0XMSbJmd7DW0HQd+BFa8WSON+Qoxq4wEUWKooIfxIAy4u3/r2mNIG/xUPdP0fQ/TKcqP1DbYbQN6Zl1c+bsOQUZewrolIb61GQ6bCOnYUoNhVvJjr0p/GxICBujcZ1pQljQ/YUExAiv2+G9frkKvxzc6o3wpg/2Ia3azWcW/+SWGNmOaFLNyc44/V3upENVgV3EBwmikU67knu7OzEo/PFSKYg+ToP8rY1CJ4QIDAQAB",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_title": "BoseSwitch",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png"
+    }
+  },
+  "permissions": [
+    "nativeMessaging",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  }
+}

@@ -1,0 +1,14 @@
+{
+ "mac": "02:00:00:00:35:02",
+ "channel": 8,
+ "time": "2026-10-13 Mac",
+ "note": "QC35 II 只读探针。当时降噪为「强」。[31.3] 回 ERROR 03（不支持），降噪档位走 [1.6]：载荷 [当前值, 支持位图]，0b=支持 0/1/3",
+ "exchanges": [
+  { "name": "bmap_version (init)", "req": "00010100", "resp": "00010305312e302e34" },
+  { "name": "product_id", "req": "00030100", "resp": "00030303402002" },
+  { "name": "product_name", "req": "01020100", "resp": "0102030d00426f73652051433335204949" },
+  { "name": "battery", "req": "02020100", "resp": "0202030164" },
+  { "name": "anr", "req": "01060100", "resp": "01060302010b" },
+  { "name": "current_mode (unsupported)", "req": "1f030100", "resp": "1f03040103" }
+ ]
+}

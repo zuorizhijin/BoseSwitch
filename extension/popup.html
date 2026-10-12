@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>BoseSwitch</title>
+<link rel="stylesheet" href="popup.css">
+</head>
+<body>
+<header>
+  <img src="icons/icon32.png" alt="">
+  <select id="headset" title="选择耳机"></select>
+  <button id="refresh" class="icon" title="重新读取">↻</button>
+</header>
+<section id="info" hidden></section>
+<section id="modes" hidden>
+  <h2>降噪模式</h2>
+  <div class="seg" id="modeButtons"></div>
+</section>
+<section id="devices" hidden>
+  <h2>耳机记住的设备</h2>
+  <ul id="deviceList"></ul>
+</section>
+<p id="msg"></p>
+<footer><a href="diag.html" target="_blank">诊断页</a></footer>
+<script type="module" src="popup.js"></script>
+</body>
+</html>
